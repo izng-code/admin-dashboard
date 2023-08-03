@@ -23,11 +23,13 @@ body {
 .header {
     grid-area: 1 / 2 / 2 / 2;
     background-color: #1d1d11;
+    box-shadow: 0 33% 33% 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .main {
     grid-area: 2 / 2 / 3 / 3;
     background-color: rgb(47, 58, 78);
+    padding: 15px;
 }
 
 .svg, .dash{
@@ -123,4 +125,52 @@ button {
     color: whitesmoke;
     font-size: 0.8rem;
     font-weight: 900;
+}
+
+.flex-container-main {
+    display: flex;
+    justify-content: space-between;
+}
+.grid-container-cards {
+    display: grid;
+    grid-template-columns: 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    row-gap: 15px;
+    column-gap: 25px;
+}
+.card {
+    width: clamp(1fr, 2fr, 3fr);
+    height: 150px;
+    background-color: #1d1d11;
+    padding: 20px;
+    border-radius: 8px;
+    color: whitesmoke;
+    border-left: 6px solid #2272FF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-heading {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.card-icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 45px;
+    gap: 5px;
+}
+
+h3 {
+    margin: 10px 15% 10px 0px;
+    padding: 0px;
+    display: flex;
+    color: #2272FF;
+    text-shadow: 1px 1px 1px rgba(53, 53, 53, 0.267);
 }
